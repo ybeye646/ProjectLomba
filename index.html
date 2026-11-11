@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiliGuard - Digital Eco-Tourism Pantai Kili-Kili</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col justify-between">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-emerald-500/20 p-2 rounded-xl border border-emerald-500/30 text-emerald-400">
+                    <i data-lucide="shield-check" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
+                        KiliGuard <span class="bg-emerald-500 text-slate-950 text-xs px-2 py-0.5 rounded-full font-bold">ECO-HUB</span>
+                    </h1>
+                    <p class="text-xs text-slate-400">Konservasi Penyu & Wisata Pantai Kili-Kili</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold">
+                <a href="#about" class="text-slate-300 hover:text-emerald-400 transition">Tentang</a>
+                <a href="#simulation" class="text-slate-300 hover:text-emerald-400 transition">Simulasi Adopsi</a>
+                <a href="#certificate" class="text-slate-300 hover:text-emerald-400 transition">Sertifikat Digital</a>
+                <a href="#quiz" class="text-slate-300 hover:text-emerald-400 transition">Kuis Edukasi</a>
+            </nav>
+
+            <button onclick="scrollToAdopt()" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 transition shadow-lg shadow-emerald-500/20">
+                <i data-lucide="heart" class="w-4 h-4 fill-slate-950"></i> Adopsi Penyu
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-6xl mx-auto px-4 py-8 space-y-16 flex-grow">
+
+        <!-- HERO SECTION -->
+        <section id="about" class="grid md:grid-cols-2 gap-8 items-center pt-4">
+            <div class="space-y-6">
+                <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1.5 rounded-full text-emerald-400 text-xs font-semibold">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i> Inovasi Ekowisata Berbasis Gamifikasi
+                </div>
+                <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
+                    Jelajahi Keindahan <span class="text-emerald-400 underline decoration-emerald-500/30">Kili-Kili</span>, Lindungi Penyu Hijau.
+                </h2>
+                <p class="text-slate-400 text-base leading-relaxed">
+                    Pantai Kili-Kili di Trenggalek merupakan pusat konservasi penyu penting di Jawa Timur. Lewat platform **KiliGuard**, wisatawan dapat berpartisipasi langsung dalam pelestarian ekosistem laut melalui adopsi tukik digital dan aksi nyata di lapangan.
+                </p>
+                
+                <div class="grid grid-cols-3 gap-4 pt-2">
+                    <div class="bg-slate-800/50 border border-slate-700/50 p-3 rounded-2xl text-center">
+                        <div class="text-2xl font-bold text-emerald-400">1.200+</div>
+                        <div class="text-xs text-slate-400 mt-1">Tukik Dilepas</div>
+                    </div>
+                    <div class="bg-slate-800/50 border border-slate-700/50 p-3 rounded-2xl text-center">
+                        <div class="text-2xl font-bold text-emerald-400">98%</div>
+                        <div class="text-xs text-slate-400 mt-1">Tingkat Penetasan</div>
+                    </div>
+                    <div class="bg-slate-800/50 border border-slate-700/50 p-3 rounded-2xl text-center">
+                        <div class="text-2xl font-bold text-emerald-400">4.500+</div>
+                        <div class="text-xs text-slate-400 mt-1">Eco-Guardians</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD HIGHLIGHT VISUAL -->
+            <div class="relative">
+                <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-3xl blur opacity-30"></div>
+                <div class="relative bg-slate-800 border border-slate-700 rounded-3xl p-6 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Highlight Destinasi</span>
+                        <span class="bg-slate-700 text-slate-300 text-xs px-2.5 py-1 rounded-full">Trenggalek, Jatim</span>
+                    </div>
+                    <div class="h-48 bg-slate-700/50 rounded-2xl overflow-hidden relative flex items-center justify-center">
+                        <i data-lucide="waves" class="w-20 h-20 text-emerald-500/20 absolute"></i>
+                        <div class="text-center z-10 px-4">
+                            <i data-lucide="compass" class="w-10 h-10 text-emerald-400 mx-auto mb-2 animate-bounce"></i>
+                            <p class="font-bold text-slate-200">Kawasan Konservasi Penyu Kili-Kili</p>
+                            <p class="text-xs text-slate-400 mt-1">Garis pantai pasir hitam eksotis tempat bertelurnya penyu langka.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 text-xs text-slate-400">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                        <span>Wonocoyo, Panggul, Kabupaten Trenggalek</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADOPTION & SIMULATION SECTION -->
+        <section id="simulation" class="bg-slate-800/40 border border-slate-800 rounded-3xl p-6 md:p-8 space-y-8">
+            <div class="text-center max-w-xl mx-auto space-y-2">
+                <h3 class="text-2xl font-bold text-white">Simulasi Release & Adopsi Digital</h3>
+                <p class="text-slate-400 text-sm">Beri nama tukik digitalmu, bantu mereka berenang menuju lautan lepas, dan terbitkan Sertifikat Eco-Guardian milikmu!</p>
+            </div>
+
+            <!-- ADOPTION FORM -->
+            <div id="adoptForm" class="max-w-md mx-auto bg-slate-800 border border-slate-700 p-6 rounded-2xl space-y-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-400 mb-2">Nama Wali / Adopter</label>
+                    <input type="text" id="adopterName" placeholder="Masukkan nama kamu..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-slate-100">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-400 mb-2">Beri Nama Tukikmu</label>
+                    <input type="text" id="turtleName" placeholder="Contoh: Kili, Banyu, Milo..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-slate-100">
+                </div>
+                <button onclick="startReleaseProcess()" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-3 rounded-xl transition flex items-center justify-center gap-2">
+                    <i data-lucide="play" class="w-4 h-4 fill-slate-950"></i> Mulai Pelepasan Tukik
+                </button>
+            </div>
+
+            <!-- INTERACTIVE CANVAS SIMULATOR -->
+            <div id="simulatorContainer" class="hidden space-y-4">
+                <div class="flex justify-between items-center text-sm font-semibold">
+                    <span class="text-emerald-400" id="simStatus">Pelepasan Dimulai...</span>
+                    <span class="text-slate-400 text-xs">Klik / Tap area pasir untuk membantu mendorong tukik!</span>
+                </div>
+                <div class="relative bg-slate-950 rounded-2xl overflow-hidden border border-slate-700 h-64">
+                    <canvas id="turtleCanvas" class="w-full h-full cursor-pointer"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATE RESULT SECTION -->
+        <section id="certificate" class="hidden">
+            <div class="bg-gradient-to-b from-slate-800 to-slate-900 border-2 border-emerald-500/40 rounded-3xl p-8 max-w-2xl mx-auto text-center relative overflow-hidden shadow-2xl">
+                <div class="absolute top-0 right-0 p-8 opacity-10">
+                    <i data-lucide="award" class="w-48 h-48 text-emerald-400"></i>
+                </div>
+                
+                <div class="space-y-4 relative z-10">
+                    <div class="inline-block p-3 bg-emerald-500/20 rounded-2xl text-emerald-400 mb-2">
+                        <i data-lucide="award" class="w-10 h-10"></i>
+                    </div>
+                    <span class="block text-xs font-extrabold uppercase tracking-widest text-emerald-400">Sertifikat Resmi Eco-Guardian</span>
+                    <h3 class="text-2xl font-bold text-white">Diberikan Kepada:</h3>
+                    <div id="certAdopter" class="text-3xl font-extrabold text-emerald-400 underline decoration-emerald-500/30">-[Nama Adopter]-</div>
+                    
+                    <p class="text-slate-300 text-sm max-w-md mx-auto pt-2">
+                        Terima kasih telah berkontribusi aktif dalam mendukung kelestarian penyu di **Pantai Kili-Kili, Trenggalek**. Tukik digital pilihanmu:
+                    </p>
+                    
+                    <div class="inline-flex items-center gap-2 bg-slate-800 border border-slate-700 px-4 py-2 rounded-xl text-emerald-300 font-bold text-sm">
+                        <i data-lucide="turtle" class="w-4 h-4"></i> <span id="certTurtle">-[Nama Penyu]-</span>
+                    </div>
+
+                    <div class="pt-6 flex justify-center gap-4">
+                        <button onclick="window.print()" class="bg-slate-700 hover:bg-slate-600 text-white px-5 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 transition">
+                            <i data-lucide="printer" class="w-4 h-4"></i> Cetak / Simpan PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUIZ & INTERACTIVE KNOWLEDGE -->
+        <section id="quiz" class="grid md:grid-cols-2 gap-8 items-center bg-slate-800/30 border border-slate-800 rounded-3xl p-6 md:p-8">
+            <div class="space-y-4">
+                <div class="inline-flex items-center gap-2 bg-teal-500/10 text-teal-400 text-xs font-semibold px-3 py-1 rounded-full border border-teal-500/20">
+                    <i data-lucide="help-circle" class="w-4 h-4"></i> Uji Wawasanmu
+                </div>
+                <h3 class="text-2xl font-bold">Mini Kuis Konservasi Penyu</h3>
+                <p class="text-slate-400 text-sm">Seberapa jauh kamu mengenal biota laut dan Pantai Kili-Kili? Jawab pertanyaan berikut untuk menguji pemahaman ekologimu.</p>
+            </div>
+
+            <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 space-y-4">
+                <p id="quizQuestion" class="font-semibold text-slate-200">Loading pertanyaan...</p>
+                <div id="quizOptions" class="space-y-2"></div>
+                <div id="quizFeedback" class="text-xs font-bold hidden p-2 rounded-lg text-center"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-800 bg-slate-950 py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center text-slate-500 text-xs space-y-2">
+            <p>&copy; 2026 KiliGuard Startup Project. Dirancang untuk Kompetisi Aplikasi Web Ekowisata Pantai Kili-Kili, Trenggalek.</p>
+            <p class="text-slate-600">Dikembangkan dengan HTML, CSS (Tailwind), & JavaScript Native.</p>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
