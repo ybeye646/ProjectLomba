@@ -1,6 +1,8 @@
-/* Custom Font */
+/* Base Typography & Theme */
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
+    color-scheme: dark;
+    overflow-x: hidden;
 }
 
 /* Smooth Scrolling */
@@ -8,18 +10,65 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Custom Print Styles for Certificate */
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #10b981;
+}
+
+/* Custom Interactive Effects */
+.group:hover img {
+    filter: brightness(1.05);
+}
+
+input, select, button {
+    transition: all 0.2s ease-in-out;
+}
+
+input:focus, select:focus {
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+#turtleCanvas {
+    touch-action: manipulation;
+}
+
+/* Print Certificate Configuration */
 @media print {
     body * {
         visibility: hidden;
     }
+
     #certificate, #certificate * {
         visibility: visible;
     }
+
     #certificate {
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
+        margin: 0;
+        padding: 20px;
+        background: #0f172a !important;
+        border: 2px solid #10b981 !important;
+        border-radius: 16px;
+        box-shadow: none !important;
+    }
+
+    #certificate button {
+        display: none !important;
     }
 }
