@@ -68,7 +68,7 @@ function runSimulation() {
     ctx.stroke();
 
     // Calculate Turtle Position
-    progress += 0.2; // Auto move speed
+    progress += 0.25; // Auto move speed
     turtleX = (progress / 100) * (canvas.width - 40);
 
     // Draw Turtle Icon / Graphics
@@ -85,7 +85,7 @@ function runSimulation() {
     // Update Status Label
     const statusText = document.getElementById('simStatus');
     if (progress < 70) {
-        statusText.innerText = 'Tukik sedang merayap di pasir Kili-Kili...';
+        statusText.innerText = 'Tukik sedang merayap di pasir Pantai Kili-Kili...';
     } else if (progress < 100) {
         statusText.innerText = 'Tukik mendekati ombak lautan!';
     } else {
@@ -109,21 +109,32 @@ function finishSimulation() {
 
         document.getElementById('certAdopter').innerText = document.getElementById('adopterName').value;
         document.getElementById('certTurtle').innerText = document.getElementById('turtleName').value;
+        document.getElementById('certSpecies').innerText = document.getElementById('turtleSpeciesSelect').value;
 
         document.getElementById('certificate').scrollIntoView({ behavior: 'smooth' });
     }, 1000);
 }
 
-// Mini Quiz Logic
+// Mini Quiz Data (Materi 4 Spesies Penyu)
 const quizData = [
     {
-        q: "Spesies penyu apa yang paling dominan bertelur di Pantai Kili-Kili?",
-        options: ["Penyu Hijau", "Penyu Belimbing", "Penyu Sisik", "Penyu Pipih"],
+        q: "Spesies penyu mana yang paling dominan bertelur di Pantai Kili-Kili?",
+        options: ["Penyu Lekang Abu-abu", "Penyu Belimbing", "Penyu Sisik", "Penyu Hijau"],
         answer: 0
     },
     {
-        q: "Apa tindakan terbaik jika menemukan penyu bertelur malam hari?",
-        options: ["Nyalakan lampu kilat hp", "Jangan ganggu & matikan penerangan", "Dekati dan pegang penyunya", "Beri makan penyu"],
+        q: "Manakah spesies penyu terbesar di dunia yang karapasnya menyerupai belimbing?",
+        options: ["Penyu Hijau", "Penyu Sisik", "Penyu Belimbing", "Penyu Lekang"],
+        answer: 2
+    },
+    {
+        q: "Penyu yang memiliki bentuk paruh tajam seperti elang dan bercorak indah adalah...",
+        options: ["Penyu Sisik", "Penyu Belimbing", "Penyu Lekang Abu-abu", "Penyu Hijau"],
+        answer: 0
+    },
+    {
+        q: "Apa tindakan terbaik jika menemukan penyu bertelur di malam hari?",
+        options: ["Nyalakan flash HP untuk foto", "Matikan penerangan & jangan mengganggu", "Mendekati dan memegang penyu", "Beri makan penyu"],
         answer: 1
     }
 ];
@@ -152,7 +163,7 @@ function checkAnswer(selectedIdx) {
 
     if (selectedIdx === q.answer) {
         feedback.className = "text-xs font-bold p-3 rounded-xl text-center bg-emerald-500/20 text-emerald-400 border border-emerald-500/30";
-        feedback.innerText = "Jawaban Benar! Kamu luar biasa.";
+        feedback.innerText = "Jawaban Benar! Wawasan ekologimu sangat baik.";
     } else {
         feedback.className = "text-xs font-bold p-3 rounded-xl text-center bg-rose-500/20 text-rose-400 border border-rose-500/30";
         feedback.innerText = "Kurang tepat, coba pelajari lagi ya!";
